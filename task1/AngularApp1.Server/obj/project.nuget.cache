@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1iD7lXM40Sg=",
+  "dgSpecHash": "xCCrjVo6kLk=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Orange\\source\\repos\\AngularApp1\\AngularApp1.Server\\AngularApp1.Server.csproj",
+  "projectFilePath": "C:\\Users\\Orange\\Desktop\\Angular\\Angular\\task1\\AngularApp1.Server\\AngularApp1.Server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Orange\\.nuget\\packages\\microsoft.aspnetcore.spaproxy\\8.0.8\\microsoft.aspnetcore.spaproxy.8.0.8.nupkg.sha512",
     "C:\\Users\\Orange\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
