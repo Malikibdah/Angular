@@ -8,13 +8,15 @@ import { ActivatedRoute } from '@angular/router';
   styleUrl: './sub-services.component.css'
 })
 export class SubServicesComponent {
+
   parameter: any
-  servicesArray: any
+  subServiceData: any
+  
   ngOnInit() {
     this.parameter = this._route.snapshot.paramMap.get("id");
     this.getsubServices(this.parameter);
   }
-  subServiceData: any
+  
   constructor(private _ser: UrlService, private _route: ActivatedRoute) { }
   getsubServices(id: any) {
     this._ser.getSubServicesbyServiceId(id).subscribe((data) => {
@@ -22,4 +24,5 @@ export class SubServicesComponent {
       console.log("this.subServiceData", this.subServiceData)
     })
   }
+
 }
