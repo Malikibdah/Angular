@@ -14,6 +14,8 @@ import { RouterModule } from '@angular/router';
 import { LectureComponent } from './lecture/lecture.component';
 import { SubsecribtionComponent } from './subsecribtion/subsecribtion.component';
 import { SubservicedetailsComponent } from './subservicedetails/subservicedetails.component';
+import { RegistrationUserComponent } from './registration-user/registration-user.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { SubservicedetailsComponent } from './subservicedetails/subservicedetail
     SubServicesComponent,
     LectureComponent,
     SubsecribtionComponent,
-    SubservicedetailsComponent
+    SubservicedetailsComponent,
+    RegistrationUserComponent,
+    LoginComponent
   ],
   imports: [
     FormsModule,
@@ -37,7 +41,9 @@ import { SubservicedetailsComponent } from './subservicedetails/subservicedetail
       { path: 'SubServices/:id', component: SubServicesComponent },
       { path: "lecture", component: LectureComponent },
       { path: "subsecribtion", component: SubsecribtionComponent },
-      { path: "subseviceDeltails/:id", component : SubservicedetailsComponent }
+      { path: "subseviceDeltails/:id", component: SubservicedetailsComponent },
+      { path: "register", component: RegistrationUserComponent },
+      { path: "login", component: LoginComponent }
 
     ])
   ],

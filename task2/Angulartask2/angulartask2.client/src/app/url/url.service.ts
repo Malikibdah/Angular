@@ -34,4 +34,11 @@ export class UrlService {
 
     return this.http.post<any>(`${this.staticData}/UserSubscribtion` , data)
   }
+
+  addUserRegistration(data: any): Observable<any> {
+    return this.http.post<any>(`${this.staticData}/User`, data)
+  }
+  loginUser(data: any): Observable<any> {
+    return this.http.post<any>(`${this.staticData}/User/login`, data)
+  }
 }
