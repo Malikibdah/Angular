@@ -16,6 +16,10 @@ import { SubsecribtionComponent } from './subsecribtion/subsecribtion.component'
 import { SubservicedetailsComponent } from './subservicedetails/subservicedetails.component';
 import { RegistrationUserComponent } from './registration-user/registration-user.component';
 import { LoginComponent } from './login/login.component';
+import { AddServiceComponent } from './Admin/add-service/add-service.component';
+import { DashboardComponent } from './Admin/dashboard/dashboard.component';
+import { ServicesAdminComponent } from './Admin/services-admin/services-admin.component';
+import { EditServicesComponent } from './Admin/edit-services/edit-services.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,11 @@ import { LoginComponent } from './login/login.component';
     SubsecribtionComponent,
     SubservicedetailsComponent,
     RegistrationUserComponent,
-    LoginComponent
+    LoginComponent,
+    AddServiceComponent,
+    DashboardComponent,
+    ServicesAdminComponent,
+    EditServicesComponent
   ],
   imports: [
     FormsModule,
@@ -43,7 +51,14 @@ import { LoginComponent } from './login/login.component';
       { path: "subsecribtion", component: SubsecribtionComponent },
       { path: "subseviceDeltails/:id", component: SubservicedetailsComponent },
       { path: "register", component: RegistrationUserComponent },
-      { path: "login", component: LoginComponent }
+      { path: "login", component: LoginComponent },
+      {
+        path: "dashboard", component: DashboardComponent, children: [
+          { path: "AddService", component: AddServiceComponent },
+          { path: "AllServices", component: ServicesAdminComponent },
+          { path: "EditService/:id", component: EditServicesComponent }
+        ]
+      }
 
     ])
   ],
