@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UrlService } from '../url/url.service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -7,4 +8,14 @@ import { Component } from '@angular/core';
 })
 export class NavBarComponent {
 
+  constructor(private _ser: UrlService) { }
+
+  email = ""
+  ngOnInit() {
+    this._ser.emailaddress.subscribe((data) => {
+      debugger
+      this.email = data
+    })
+
+  }
 }

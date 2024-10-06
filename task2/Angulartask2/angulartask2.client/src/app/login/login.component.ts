@@ -23,6 +23,8 @@ export class LoginComponent {
       form.append(key, data[key])
     }
     this._ser.loginUser(form).subscribe((response: any) => {
+      debugger
+      this._ser['email'].next(response.email);
       alert("user logged successfully")
       if (response.email == "admin@admin.com") {
         this._router.navigate(['/dashboard'])
